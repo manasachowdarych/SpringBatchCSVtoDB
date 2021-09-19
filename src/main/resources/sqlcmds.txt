@@ -1,0 +1,37 @@
+drop database db1;
+
+create database db1;
+
+use db1;
+
+create table test(
+id BIGINT,
+name VARCHAR(20),
+m1 BIGINT,
+m2 BIGINT
+);
+
+create table test1(
+id BIGINT,
+name VARCHAR(20),
+m1 BIGINT,
+m2 BIGINT
+);
+
+create table test2(
+id BIGINT,
+name VARCHAR(20),
+m1 BIGINT,
+m2 BIGINT
+);
+
+create table test3(
+id BIGINT,
+name VARCHAR(20),
+m1 BIGINT,
+m2 BIGINT
+);
+
+
+
+

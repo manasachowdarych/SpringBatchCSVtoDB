@@ -16,6 +16,7 @@ import org.springframework.batch.item.file.transform.DelimitedLineTokenizer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.FileSystemResource;
 
 import com.telsuko.SpringBatchCSVtoDB.model.Student;
@@ -37,7 +38,8 @@ public class StudentBatchConfig
 	public FlatFileItemReader<Student> readFromCsv()
 	{
 		FlatFileItemReader<Student> reader = new FlatFileItemReader<Student>();
-		reader.setResource(new FileSystemResource("C://Users/c.h.manasa chowdary/Desktop/inputFile1.csv"));
+		//reader.setResource(new FileSystemResource("C://Users/c.h.manasa chowdary/Desktop/inputFile1.csv"));
+		reader.setResource(new ClassPathResource("inputFile1.csv"));
 		reader.setLinesToSkip(1);
 		reader.setLineMapper(new DefaultLineMapper<Student>() {
 			{
